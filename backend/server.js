@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text({ type: 'application/xml' })); // Add this line to handle XML content type
+app.use(bodyParser.text({ type: 'application/xml' }));
 app.use(fileUpload());
 
 // MySQL connection
@@ -35,9 +35,28 @@ db.connect((err) => {
     console.log('Connected to MySQL database');
 
     // Create tables if they do not exist
+    createSuperUserTable();
     createCsvDataTable();
     createXmlDataTable();
 });
+
+// Function to create Super User table if it does not exist
+const createSuperUserTable = () => {
+    const query = `
+        CREATE TABLE IF NOT EXISTS super_user (
+            su_id VARCHAR(50) NOT NULL,
+            password VARCHAR(700) NOT NULL,
+            PRIMARY KEY (su_id)
+        )
+    `;
+    db.query(query, (err, results) => {
+        if (err) {
+            console.error('Error creating super_user table:', err);
+            throw err;
+        }
+        console.log('Super User table created or already exists');
+    });
+};
 
 // Function to create CSV data table if it does not exist
 const createCsvDataTable = () => {
@@ -104,7 +123,7 @@ app.post('/login', async (req, res) => {
             }
 
             if (results.length === 0) {
-                console.error('User not found:', su_id);
+                console.error('Ok User not found:', su_id);
                 return res.status(400).send('Invalid email or password');
             }
 
