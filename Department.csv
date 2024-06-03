@@ -1,0 +1,39 @@
+dept_id,dept_name,description,phone,ext,fax,email
+1,Department of International Relations,Description of International Relations,+123456789,123,fax@example.com,international@example.com
+2,Department of English,Description of English Department,+987654321,456,fax@example.com,english@example.com
+3,Department of History,Description of History Department,+246813579,789,fax@example.com,history@example.com
+4,Department of Philosophy,Description of Philosophy Department,+135792468,321,fax@example.com,philosophy@example.com
+5,Department of Drama & Dramatics,Description of Drama Department,+112233445,678,fax@example.com,drama@example.com
+6,Department of Archaeology,Description of Archaeology Department,+998877665,543,fax@example.com,archaeology@example.com
+7,Department of Bangla,Description of Bangla Department,+112233445,876,fax@example.com,bangla@example.com
+8,Department of Journalism and Media Studies,Description of Journalism Department,+334455667,543,fax@example.com,journalism@example.com
+9,Department of Fine Art,Description of Fine Art Department,+778899001,234,fax@example.com,fineart@example.com
+10,Department of Computer Science and Engineering,Description of CSE Department,+112233445,876,fax@example.com,cse@example.com
+11,Department of Mathematics,Description of Mathematics Department,+889900011,789,fax@example.com,mathematics@example.com
+12,Department of Physics,Description of Physics Department,+332211445,123,fax@example.com,physics@example.com
+13,Department of Environmental Sciences,Description of Environmental Sciences,+554433221,456,fax@example.com,environment@example.com
+14,Department of Statistics and Data Science,Description of Statistics Department,+998877665,321,fax@example.com,statistics@example.com
+15,Department of Geological Sciences,Description of Geological Sciences,+112233445,654,fax@example.com,geology@example.com
+16,Department of Chemistry,Description of Chemistry Department,+778899001,987,fax@example.com,chemistry@example.com
+17,Department of Economics,Description of Economics Department,+334455667,654,fax@example.com,economics@example.com
+18,Department of Urban & Regional Planning,Description of Urban Planning Department,+112233445,789,fax@example.com,urbanplanning@example.com
+19,Department of Anthropology,Description of Anthropology Department,+998877665,432,fax@example.com,anthropology@example.com
+20,Department of Geography & Environment,Description of Geography Department,+112233445,567,fax@example.com,geography@example.com
+21,Department of Government & Politics,Description of Government Department,+667788990,345,fax@example.com,government@example.com
+22,Department of Public Administration,Description of Public Administration Department,+112233445,678,fax@example.com,publicadmin@example.com
+23,Department of Botany,Description of Botany Department,+998877665,789,fax@example.com,botany@example.com
+24,Department of Biochemistry & Molecular Biology,Description of Biochemistry Department,+112233445,987,fax@example.com,biochemistry@example.com
+25,Department of Zoology,Description of Zoology Department,+554433221,654,fax@example.com,zoology@example.com
+26,Department of Pharmacy,Description of Pharmacy Department,+778899001,321,fax@example.com,pharmacy@example.com
+27,Department of Microbiology,Description of Microbiology Department,+334455667,234,fax@example.com,microbiology@example.com
+28,Department of Biotechnology & Genetic Engineering,Description of Biotechnology Department,+112233445,567,fax@example.com,biotechnology@example.com
+29,Department of Public Health and Informatics,Description of Public Health Department,+998877665,432,fax@example.com,publichealth@example.com
+30,Department of Finance & Banking,Description of Finance Department,+112233445,345,fax@example.com,finance@example.com
+31,Department of Marketing,Description of Marketing Department,+998877665,678,fax@example.com,marketing@example.com
+32,Department of Accounting and Information Systems,Description of Accounting Department,+112233445,789,fax@example.com,accounting@example.com
+33,Department of Management Studies,Description of Management Department,+778899001,987,fax@example.com,management@example.com
+34,Department of Law & Justice,Description of Law Department,+334455667,654,fax@example.com,law@example.com
+35,Institute of Business Administration,Description of IBA,+112233445,321,fax@example.com,iba@example.com
+36,Institute of Information Technology,Description of IT Institute,+998877665,234,fax@example.com,it@example.com
+37,Institute of Remote Sensing and GIS,Description of Remote Sensing Institute,+112233445,567,fax@example.com,remote@example.com
+38,Bangabandhu Institute of Comparative Literature and Culture,Description of Comparative Literature Institute,+998877665,678,fax@example.com,litculture@example.com
