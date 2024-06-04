@@ -1,0 +1,4 @@
+Id,Dept_Name,Descript,Phone,Fax,Email
+1,Department of International Relations,Description of International Relations,+123456789,fax@example.com,international@example.com
+2,Department of Computer Science and Engineering,Description of CSE,+12345678,fax@example.com,CSE@example.com
+

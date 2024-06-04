@@ -1,0 +1,10 @@
+room_id,Room_no,Room_type,Capacity,dept_id
+1,CSE-101,Class Room,70,2
+2,CSE-102,Class Room,50,2
+3,CSE-103,Class Room,50,2
+4,CSE-105,Lab Room,72,2
+5,CSE-201,Computer Lab,54,2
+6,CSE-202,Seminar Room,120,2
+7,CSE-203,Computer Lab,48,2
+8,CSE-204,Computer Lab,10,2
+9,CSE-302,Computer Lab,60,2

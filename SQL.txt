@@ -1,0 +1,108 @@
+CREATE TABLE IF NOT EXISTS Department (
+    dept_id INT AUTO_INCREMENT PRIMARY KEY,
+    Dept_Name VARCHAR(255),
+    Descript VARCHAR(255),
+    Phone VARCHAR(255),
+    Fax VARCHAR(255),
+    Email VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS Teacher (
+    teacher_id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Designation ENUM('Professor', 'Associate Professor', 'Assistant Professor', 'Lecturer') NOT NULL,
+    dept_id INT,
+    Abvr VARCHAR(255),
+    Email VARCHAR(255),
+    Password VARCHAR(700),
+    Phone VARCHAR(255),
+    FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+);
+
+CREATE TABLE IF NOT EXISTS DepartmentChairman (
+    dept_id INT,
+    teacher_id INT,
+    PRIMARY KEY (dept_id, teacher_id),
+    FOREIGN KEY (dept_id) REFERENCES Department(dept_id),
+    FOREIGN KEY (teacher_id) REFERENCES Teacher(teacher_id)
+);
+
+CREATE TABLE IF NOT EXISTS Staff (
+    staff_id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Role VARCHAR(255),
+    dept_id INT,
+    Email VARCHAR(255),
+    Password VARCHAR(700),
+    Phone VARCHAR(255),
+    FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+);
+
+
+CREATE TABLE IF NOT EXISTS Room (
+    room_id INT AUTO_INCREMENT PRIMARY KEY,
+    Room_no VARCHAR(255) NOT NULL,
+    Room_type ENUM('Class Room', 'Lab Room', 'Lecture Hall', 'Computer Lab', 'Seminar Room') NOT NULL,
+    Capacity INT NOT NULL,
+    dept_id INT NOT NULL,
+    FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+);
+
+
+
+CREATE TABLE IF NOT EXISTS Session (
+    session_id INT AUTO_INCREMENT PRIMARY KEY,
+    dept_id INT,
+    Session_name VARCHAR(255) NOT NULL,
+    FOREIGN KEY (dept_id) REFERENCES Department(dept_id)
+);
+
+CREATE TABLE IF NOT EXISTS ExamYear (
+    exam_year_id INT AUTO_INCREMENT PRIMARY KEY,
+    session_id INT NOT NULL,
+    Education_level ENUM('Graduate', 'Undergraduate', 'Postgraduate') NOT NULL,
+    Exam_year INT NOT NULL,
+    Year INT NOT NULL,
+    Semester INT NOT NULL,
+    Start_date DATE,
+    End_date DATE,
+    FOREIGN KEY (session_id) REFERENCES Session(session_id)
+);
+
+
+CREATE TABLE IF NOT EXISTS Student (
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Gender ENUM('Male', 'Female') NOT NULL,
+    session_id INT NOT NULL,
+    Class_roll VARCHAR(255) NOT NULL,
+    Exam_roll VARCHAR(255) UNIQUE NOT NULL,
+    Registration_no VARCHAR(255) UNIQUE NOT NULL,
+    Email VARCHAR(255) NOT NULL,
+    Password VARCHAR(700) NOT NULL,
+    Phone VARCHAR(255) NOT NULL,
+    FOREIGN KEY (session_id) REFERENCES Session(session_id)
+);
+
+
+CREATE TABLE IF NOT EXISTS CassRepresentative (
+    cr_id INT AUTO_INCREMENT PRIMARY KEY,
+    exam_year_id INT NOT NULL,
+    student_id INT NOT NULL,
+    role ENUM('Male', 'Female') NOT NULL,
+    FOREIGN KEY (exam_year_id) REFERENCES ExamYear(exam_year_id),
+    FOREIGN KEY (student_id) REFERENCES Student(student_id),
+    UNIQUE (exam_year_id, role)
+);
+
+CREATE TABLE IF NOT EXISTS ExamCommittee (
+    exam_committee_id INT AUTO_INCREMENT PRIMARY KEY,
+    exam_year_id INT NOT NULL,
+    teacher_id INT NOT NULL,
+    FOREIGN KEY (exam_year_id) REFERENCES ExamYear(exam_year_id),
+    FOREIGN KEY (teacher_id) REFERENCES Teacher(teacher_id),
+    UNIQUE (exam_year_id, teacher_id)
+);
+
+
+
